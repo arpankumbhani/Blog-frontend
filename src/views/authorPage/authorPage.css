@@ -1,0 +1,55 @@
+@media (min-width: 1200px) {
+  .container-xl {
+    width: 1100px;
+  }
+}
+@media (min-width: 800px) {
+  .card-container {
+    width: 790px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  /* border: #d4ddeb4a; */
+  padding: 1rem;
+  border: none;
+}
+
+.card-header {
+  /* max-width: 400px; */
+  border-radius: 10px;
+}
+.frame img {
+  max-width: none !important;
+  width: 250px;
+  height: 208px;
+}
+/* .postImg {
+  height: auto;
+} */
+
+.author-page.about-author {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.about-author .thumb {
+  float: left;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* .img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+} */
+.details {
+  margin-left: 130px;
+}
+.name {
+  font-size: 32px;
+}

@@ -1,13 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding-top: 60px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* AppFooter */
+
+/* .slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.image {
+  width: 1000px;
+  height: 530px;
+  border-radius: 10px;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 42%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 42%;
+  left: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+} */
+
+/* About me */
+/* .about-contentbox {
+  margin-top: 80px;
+  text-align: left;
+  line-height: 1.8;
+}
+.about-contentbox h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+p {
+  margin: 0 0 20px;
+}
+.facts-list {
+  margin-top: 30px;
+}
+.owl-carousel {
+  display: none;
+  width: 100%;
+  z-index: 1;
+}
+
+.social-container {
+  background: #ffffff;
+  padding: 25px 50px;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.facebook {
+  color: #4968ad;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: rgb(227, 33, 139);
+} */
+
+/* home */
+
+/* .gap {
+  gap: 2rem;
+} */
