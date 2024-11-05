@@ -13,7 +13,7 @@ export default function HomeDetailPage() {
     async (postID) => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/post/getPostDataById`,
+          `${process.env.REACT_APP_API_URL}api/post/getPostDataById`,
           {
             method: "post",
             headers: {

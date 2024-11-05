@@ -16,7 +16,7 @@ const HomeTitle = () => {
     async (postID) => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/post/getPostDataById`,
+          `${process.env.REACT_APP_API_URL}api/post/getPostDataById`,
           {
             method: "post",
             headers: {
@@ -46,7 +46,7 @@ const HomeTitle = () => {
     async (authorID) => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/author/getAuthorById`,
+          `${process.env.REACT_APP_API_URL}api/author/getAuthorById`,
           {
             method: "post",
             headers: {
@@ -91,7 +91,7 @@ const HomeTitle = () => {
           <>
             <li className="list-inline-item" key={homeData.authorData._id}>
               <img
-                src={`http://localhost:8080/${homeData.authorData.img}`}
+                src={`${process.env.REACT_APP_API_URL}${homeData.authorData.img}`}
                 className="avatar h-9 w-9 rounded-full mx-3"
                 alt=""
               />

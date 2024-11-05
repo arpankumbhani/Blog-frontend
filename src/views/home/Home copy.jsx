@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 export default function Home() {
   const [PostItems, setPostItems] = useState([]);
   const getPostData = useCallback(async () => {
-    await fetch(`http://localhost:8080/api/post/getEnablePost`, {
+    await fetch(`${process.env.REACT_APP_API_URL}api/post/getEnablePost`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -20,7 +20,7 @@ export default function Home() {
 
   const [authorItems, setAuthorItems] = useState([]);
   const getAuthorData = useCallback(async () => {
-    await fetch(`http://localhost:8080/api/author/getEnableAuthor`, {
+    await fetch(`${process.env.REACT_APP_API_URL}api/author/getEnableAuthor`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -52,7 +52,7 @@ export default function Home() {
                 >
                   <div className="relative overflow-hidden rounded-md">
                     <img
-                      src={`http://localhost:8080/${enablePost.postImg}`}
+                      src={`${process.env.REACT_APP_API_URL}${enablePost.postImg}`}
                       //   src={`localhost:`img}
                       className="card-img-top rounded-lg transition duration-500 ease-in-out hover:scale-110"
                       alt="politic"
@@ -65,7 +65,7 @@ export default function Home() {
                           <>
                             <li className="list-inline-item" key={author._id}>
                               <img
-                                src={`http://localhost:8080/${author.img}`}
+                                src={`${process.env.REACT_APP_API_URL}${author.img}`}
                                 className="avatar h-10 w-10 rounded-full mx-3"
                                 alt=""
                               />

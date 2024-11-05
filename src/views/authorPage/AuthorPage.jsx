@@ -24,7 +24,7 @@ export default function AuthorPage() {
     async (authorID) => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/author/getAuthorById`,
+          `${process.env.REACT_APP_API_URL}api/author/getAuthorById`,
           {
             method: "post",
             headers: {
@@ -54,7 +54,7 @@ export default function AuthorPage() {
     async (authorID) => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/post/getAuthorDetailPageData`,
+          `${process.env.REACT_APP_API_URL}api/post/getAuthorDetailPageData`,
           {
             method: "post",
             headers: {
@@ -89,7 +89,7 @@ export default function AuthorPage() {
         <div className="author-page about-author padding-30 rounded">
           <div className="thumb">
             <img
-              src={`http://localhost:8080/${authorData.img}`}
+              src={`${process.env.REACT_APP_API_URL}${authorData.img}`}
               className="img"
               alt=""
             />
@@ -153,7 +153,7 @@ export default function AuthorPage() {
                   <div className="p-4 rounded-md frame " key={""}>
                     <div className="relative overflow-hidden rounded-md">
                       <img
-                        src={`http://localhost:8080/${data.postImg}`}
+                        src={`${process.env.REACT_APP_API_URL}${data.postImg}`}
                         className="postImg rounded-lg rounded-lg transition duration-500 ease-in-out hover:scale-110"
                         alt=""
                       />
@@ -165,7 +165,7 @@ export default function AuthorPage() {
                         <li className="list-inline-item" key={""}>
                           <img
                             className="avatar h-10 w-10 rounded-full mx-3"
-                            src={`http://localhost:8080/${authorData.img}`}
+                            src={`${process.env.REACT_APP_API_URL}${authorData.img}`}
                             alt=""
                           />
                           <NavLink

@@ -11,11 +11,14 @@ const AppHeader = () => {
   };
   const [categoryItems, setCategoryItems] = useState([]);
   const getData = useCallback(async () => {
-    await fetch(`http://localhost:8080/api/category/getEnableCategory`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    await fetch(
+      `${process.env.REACT_APP_API_URL}api/category/getEnableCategory`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         setCategoryItems(data.enableCategory);

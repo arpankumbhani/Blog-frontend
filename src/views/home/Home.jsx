@@ -10,7 +10,7 @@ export default function Home() {
 
   const [PostItems, setPostItems] = useState([]);
   const getPostData = useCallback(async () => {
-    await fetch(`http://localhost:8080/api/post/getEnablePost`, {
+    await fetch(`${process.env.REACT_APP_API_URL}api/post/getEnablePost`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -24,7 +24,7 @@ export default function Home() {
 
   const [authorItems, setAuthorItems] = useState([]);
   const getAuthorData = useCallback(async () => {
-    await fetch(`http://localhost:8080/api/author/getEnableAuthor`, {
+    await fetch(`${process.env.REACT_APP_API_URL}api/author/getEnableAuthor`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -62,7 +62,7 @@ export default function Home() {
                       life style
                     </NavLink> */}
                     <img
-                      src={`http://localhost:8080/${enablePost.postImg}`}
+                      src={`${process.env.REACT_APP_API_URL}${enablePost.postImg}`}
                       className="card-img-top rounded-lg transition duration-500 ease-in-out hover:scale-110"
                       alt=""
                     />
@@ -79,7 +79,7 @@ export default function Home() {
                                   key={author._id}
                                 >
                                   <img
-                                    src={`http://localhost:8080/${author.img}`}
+                                    src={`${process.env.REACT_APP_API_URL}${author.img}`}
                                     className="avatar h-10 w-10 rounded-full mx-3"
                                     alt=""
                                   />
